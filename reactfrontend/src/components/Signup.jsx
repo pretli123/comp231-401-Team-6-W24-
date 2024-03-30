@@ -1,4 +1,4 @@
-
+import './Signup.css';
 import React, { useState } from 'react';
 
 const SignupForm = () => {
