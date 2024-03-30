@@ -8,26 +8,37 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+       <form className="sign-up-form">
+        <FormTitle className="sign-up-form__title" text="Login" />
+        <Field
+          className="sign-up-form__email"
+          placeholder="Enter Email"
+          name="email"
+          type="email"
+          title="Email"
+          component={FormInput}
+        />
+        <Field
+          className="sign-up-form__password"
+          placeholder="Enter Password"
+          name="password"
+          type="password"
+          title="Password"
+          component={FormInput}
+        />
+        <Field
+          className="sign-up-form__login"
+          name="login"
+          type="submit"
+          title="Login"
+          component={FormButton}
+        />
+        <div className='sign-up-form__text-links'>
+            <TextLink to='/forgot' text='Forgot Password'/>
+            <TextLink to='/signup' text='Not a member? Register here'/>
+        </div>
+
+      </form>
     </>
   )
 }
