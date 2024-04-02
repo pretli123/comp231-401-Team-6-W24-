@@ -1,25 +1,63 @@
 import { useState } from 'react'
 import './App.css'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+
+import EditNote from './components/EditNote';
+import ShowNote from './components/ShowNote';
+import ListNotes from "./components/ListNotes";
+
 import Signup from './components/Signup';
 import banner from './assets/banner.jpg';
+
+import Home from './components/Home';
+import Login from './components/Login';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className="top">
-        <div id="logo">
-          <img src={banner} alt="blue banner" />
-        </div>
+
+    <Router>
+      <Navbar bg="primary" variant="dark" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">NoteSphere</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link as={Link} to="/home" >Home</Nav.Link>
+              <Nav.Link as={Link} to="/login">Login</Nav.Link>
+              <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
+              <Nav.Link as={Link} to="/listnotes">List of Notes</Nav.Link>
+              
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      <div>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />         
+          <Route path="signup" element ={< Signup />} />
+          <Route path="login" element= {< Login />}  />
+          <Route path="listnotes" element= {< ListNotes />}  />
+          <Route path="shownote/:id" element= {< ShowNote />}  />
+          <Route path="editnote/:id" element= {< EditNote />}  />
+
+        </Routes>
       </div>
 
-       <div>
-      <h1>Loop</h1>
-      <Signup />
-    </div>
 
-    </>
+    </Router>
   )
 }
 
