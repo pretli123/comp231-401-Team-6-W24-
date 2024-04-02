@@ -36,7 +36,7 @@ function App() {
               <Nav.Link as={Link} to="/home" >Home</Nav.Link>
               <Nav.Link as={Link} to="/login">Login</Nav.Link>
               <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
-              <Nav.Link as={Link} to="/listnotes">List of Notes</Nav.Link>
+              <Nav.Link as={Link} to="/createnote">Create Notes</Nav.Link>
               
             </Nav>
           </Navbar.Collapse>
@@ -49,7 +49,7 @@ function App() {
           <Route path="home" element={<Home />} />         
           <Route path="signup" element ={< Signup />} />
           <Route path="login" element= {< Login />}  />
-          <Route path="listnotes" element= {< ListNotes />}  />
+          <Route path="createnote" element= {< CreateNote />}  />
           <Route path="shownote/:id" element= {< ShowNote />}  />
           <Route path="editnote/:id" element= {< EditNote />}  />
 
