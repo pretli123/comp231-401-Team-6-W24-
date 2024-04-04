@@ -5,6 +5,6 @@ const userSchema = new mongoose.Schema({
   Date: { type: Date, default: Date.now },
 });
 
-const User = mongoose.model("User", userSchema);
+const UserRegistration = mongoose.model('UserRegistration', userSchema);
 
-module.exports = User;
+module.exports = UserRegistration;

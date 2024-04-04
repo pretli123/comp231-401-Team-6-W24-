@@ -1,12 +1,13 @@
 import './Signup.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
 
 const SignupForm = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,51 +17,65 @@ const SignupForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('form data:', formData);
+
+    try {
+      const response = await axios.post('http://localhost:3001/app/signup', {
+        email,
+        password,
+        
+      });
+
+      if (response.data === "exist") {
+        alert("You already have an account");
+      } else if (response.data === "not exist") {
+        navigate("/", { state: { id: email } });
+        alert("You created your account successfully");
+      }
+
+      console.log(response.data);
+    } catch (error) {
+      alert("You cannot Signup something went wrong");
+      console.error(error);
+    }
+
+
+
+
+
   };
+  
+  useEffect(() => {
+    document.title = "Sign Up";
+  }, []);
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
-      <div className="input-container">
-        <label htmlFor="firstname" className="label">Please Enter First Name:</label>
-        <input
-          type="text"
-          id="username"
-          name="firstname"
-          value={formData.username}
-          onChange={handleChange}
-          required
-          className="input-field"
-        />
-      </div>
-      <div className="input-container">
-        <label htmlFor="email" className="label">Please Enter Email:</label>
+    <div>
+      <form className="signup" onSubmit={handleSubmit}>
+        <h3>Sign up</h3>
+
+        <label>Email:</label>
         <input
           type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="input-field"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
-      </div>
-      <div className="input-container">
-        <label htmlFor="password" className="label">Please Enter Password:</label>
+
+        <label>Password:</label>
         <input
           type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-          className="input-field"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
         />
-      </div>
-      <button type="submit" className="submit-button">Sign Up</button>
-    </form>
+        <br />
+        <br />
+        <button type="submit" className="btn btn-primary">Sign Up</button>
+        <br />
+        <p>Have an account already?</p>
+        <p><a href="/login" className="nav-link">Log in here</a></p>
+      </form>
+    </div>
   );
 };
 

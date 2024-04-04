@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/userSchema.js");
+const UserRegistration = require("../models/userSchema.js");
 const bcrypt = require("bcrypt");
 
 router.post('/signup', async (req, res) => {
@@ -9,7 +9,7 @@ router.post('/signup', async (req, res) => {
   const securePassword = await bcrypt.hash(req.body.password, saltPassword);
 
 
-  const signnUpUser = new User({
+  const signnUpUser = new UserRegistration({
     email: req.body.email,
     password:securePassword
 })
