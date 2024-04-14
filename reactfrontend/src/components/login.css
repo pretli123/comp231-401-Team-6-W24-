@@ -24,16 +24,28 @@
   border-radius: 8px;
 }
 
-/* Style for the submit button */
 .login button[type="submit"] {
   width: 100%;
   padding: 10px;
-  background-color: #1a411b;
+  background-color: #0c0e80; /* Change background color to blue */
+  color: white; /* Set text color to white */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center; /* Center text */
+}
+
+/* Style for the submit button
+.login button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0c0e80;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-}
+} */
+
 
 /* Style for the link to sign up */
 .login .nav-link {
