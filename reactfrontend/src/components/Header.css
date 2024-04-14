@@ -1,0 +1,17 @@
+/* Style for the header */
+.header {
+    background-color: #095097; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 1rem; /* Add some padding */
+    text-align: center; /* Center align header content */
+    width: 1300px; /* Set a specific width */
+    margin: 0 auto; /* Center the header horizontally */
+  }
+  
+  /* Style for the navigation links */
+  .nav-link {
+    color: #ffffff; /* White text */
+    margin-right: 1rem; /* Add some spacing between links */
+    text-decoration: none; /* Remove default underline */
+  }
+  

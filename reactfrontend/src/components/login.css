@@ -1,4 +1,50 @@
-form {
+/* Style for the form container */
+.login {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Style for the form label */
+.login label {
+  margin-bottom: 5px;
+}
+
+/* Style for the input fields */
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+}
+
+/* Style for the submit button */
+.login button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a411b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Style for the link to sign up */
+.login .nav-link {
+  text-decoration: none;
+  color: #1a411b;
+  cursor: pointer;
+}
+
+
+
+/* form {
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
@@ -28,4 +74,4 @@ form {
     margin: 0 auto;
     max-width: 600px;
   }
-}
+} */

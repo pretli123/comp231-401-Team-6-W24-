@@ -1,4 +1,50 @@
+/* Style for the form container */
+.signup {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
 
+/* Style for the form label */
+.signup label {
+  margin-bottom: 5px;
+}
+
+/* Style for the input fields */
+.signup input[type="email"],
+.signup input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+}
+
+/* Style for the submit button */
+.signup button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #095097;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Style for the link to login */
+.signup .nav-link {
+  text-decoration: none;
+  color: #095097;
+  cursor: pointer;
+}
+
+
+
+
+/* 
 
 .form-container {
     display: flex;
@@ -31,4 +77,4 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+   */

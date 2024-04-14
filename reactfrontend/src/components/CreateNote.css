@@ -1,0 +1,45 @@
+/* Style for the container */
+.create-note-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for the form */
+  .create-note-form {
+    margin-top: 20px;
+  }
+  
+  /* Style for the form label */
+  .create-note-label {
+    font-weight: bold;
+  }
+  
+  /* Style for the input fields */
+  .create-note-input,
+  .create-note-textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Add rounded corners */
+    border: 1px solid #ced4da; /* Add border */
+    padding: 8px; /* Add padding */
+  }
+  
+  /* Style for the textarea */
+  .create-note-textarea {
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  /* Style for the save button */
+  .create-note-button {
+    width: 100%;
+    border-radius: 8px; /* Add rounded corners */
+    padding: 10px; /* Add padding */
+  }
+  
+  /* Style for the loading spinner */
+  .create-note-spinner {
+    display: block;
+    margin: 0 auto;
+  }
+  
