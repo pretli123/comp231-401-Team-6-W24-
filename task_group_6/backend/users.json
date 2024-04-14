@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "username": "charlie",
+      "password": "abc123"
+    },
+    {
+      "username": "john",
+      "password": "abcd123"
+    },
+    {},
+    {
+      "username": "charlie2",
+      "password": "abc123"
+    },
+    {
+      "username": "charlie4",
+      "password": "abc123"
+    },
+    {
+      "username": "charlie5",
+      "password": "abc123"
+    },
+    {
+      "username": "charlie7",
+      "password": "abc123"
+    },
+    {
+      "username": "charlie8",
+      "password": "abc123"
+    },
+    {
+      "username": "charlie10",
+      "password": "abc123"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+/* In App.css or your main CSS file */
+@import '~react-big-calendar/lib/css/react-big-calendar.css';
+
+.my-modal .modal-content { /* Targets the modal content within your custom class */
+    width: 500px; 
+    height: 300px; 
+    max-width: 90%; /* Optional: Responsive sizing */
+    max-height: 80%; /* Optional: Responsive sizing */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+  }
