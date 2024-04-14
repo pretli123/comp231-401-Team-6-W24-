@@ -10,8 +10,15 @@
   
   /* Style for the navigation links */
   .nav-link {
-    color: #ffffff; /* White text */
-    margin-right: 1rem; /* Add some spacing between links */
-    text-decoration: none; /* Remove default underline */
+    color: black; 
+    margin-right: 1rem; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
   }
   

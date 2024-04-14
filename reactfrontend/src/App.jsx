@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import Header from './components/Header'; // Import the Header component
+
 import EditNote from './components/EditNote';
 import ShowNote from './components/ShowNote';
 import ListNotes from "./components/ListNotes";
@@ -37,6 +38,7 @@ function App() {
             <Route path="editnote/:id" element={<EditNote />} />
           </Routes>
         </div>
+        <footer /> {/**this is the footer */}
       </div>
     </Router>
   )
