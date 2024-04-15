@@ -11,7 +11,7 @@ function ShowNote(props) {
   //
   const [data, setData] = useState({});
   const [showLoading, setShowLoading] = useState(true);
-  const apiUrl = "/api/api/notes/" + id;
+  const apiUrl = "api/notes/" + id;
 
   useEffect(() => {
     setShowLoading(false);

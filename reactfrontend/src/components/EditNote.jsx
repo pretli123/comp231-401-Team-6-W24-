@@ -15,7 +15,7 @@ function EditNote(props) {
   const [note, setNote] = useState({ _id: '', title: '', 
   content: '' });  
   const [showLoading, setShowLoading] = useState(true);
-  const apiUrl = "/api/api/notes/" + id;
+  const apiUrl = "api/notes/" + id;
   //runs only once after the first render
   useEffect(() => {
     setShowLoading(false);
